@@ -79,3 +79,7 @@ spring:
 #                baseMessage: Hi, there.
 #                preLogger: true
 #                postLogger: true
+
+token:
+  expiration_time: 86400000
+  secret: wz1YzqxAz7uH3sMsWTyOYZzna300gYIOkYtf3PP23OGljTrRMSfayBjhVjJ44hmAmCu8tF8FR56R
