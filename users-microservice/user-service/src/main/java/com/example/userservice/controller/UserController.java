@@ -20,7 +20,6 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/user-service")
 @RequiredArgsConstructor
 public class UserController {
 
