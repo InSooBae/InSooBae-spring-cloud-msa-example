@@ -1,0 +1,6 @@
+token:
+  expiration_time: 86400000
+  secret: wz1YzqxAz7uH3sMsWTyOYZzna300gYIOkYtf3PP23OGljTrRMSfayBjhVjJ44hmAmCu8tF8FR56R
+
+gateway:
+  ip: 192.168.0.20
