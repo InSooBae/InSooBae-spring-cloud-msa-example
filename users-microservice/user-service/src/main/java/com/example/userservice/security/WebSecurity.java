@@ -32,6 +32,7 @@ public class WebSecurity {
 //                .antMatchers("/actuator/**").permitAll() // actuator permitAll
 //                .antMatchers("/error/**").permitAll()
                 .antMatchers("/error/**").permitAll()
+                .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/**").hasIpAddress("192.168.0.20")
                 .and()
                 .authenticationManager(authenticationManager)
