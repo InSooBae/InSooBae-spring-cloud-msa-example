@@ -58,6 +58,15 @@ spring:
           predicates:
             - Path=/order-service/**
 
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/actuator/**
+            - Method=GET,POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+
 #        - id: first-service
 #          uri: lb://MY-FIRST-SERVICE
 #          predicates:
@@ -84,3 +93,9 @@ spring:
 token:
   expiration_time: 86400000
   secret: wz1YzqxAz7uH3sMsWTyOYZzna300gYIOkYtf3PP23OGljTrRMSfayBjhVjJ44hmAmCu8tF8FR56R
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace
